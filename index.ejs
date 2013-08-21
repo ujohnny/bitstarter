@@ -15,9 +15,6 @@
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
 
-    <!-- VK share button -->
-    <script src="http://vkontakte.ru/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
-
     <style type="text/css">
       @media (min-width: 890px) {
       .carousel-inner > .item > img {
@@ -34,6 +31,8 @@
       }
 
       body { background-image: url('/bg/linen.png'); }
+
+      #vk_like { margin: 0 auto; }
     </style>
 
     <script type="text/javascript">
@@ -47,16 +46,14 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+
+    <!-- VK -->
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?98"></script>
+    <script type="text/javascript">
+      VK.init({apiId: 3833027, onlyWidgets: true});
+    </script>
   </head>
   <body>
-
-    <!-- VK share button -->
-    <script type="text/javascript">
-      VK.init({
-      apiId: 3833027,
-      onlyWidgets: true
-      });
-    </script>
 
     <!-- Facebook Like button -->
     <div id="fb-root"></div>
@@ -173,23 +170,15 @@
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
-      <div class="row" style="padding-top: 5%; text-align: center;">
-	<div class="col-lg-3">
-	  <div id="vk_like"></div>
-	  <script type="text/javascript">
-	    VK.Widgets.Like('vk_like');
-	  </script>
-	</div>
-	<div class="col-lg-3">
-	  <div class="fb-like" data-href="http://www.rasseye.com" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
-	</div>
-	<div class="col-lg-3">
-	  <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://www.rasseye.com"></div>
-	</div>
-	<div class="col-lg-3">
-	  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.rasseye.com" data-via="cheesy_red">Tweet</a>
-	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	</div>
+      <div class="row col-lg-8 col-lg-offset-2" style="padding-top: 4%; text-align: center;">
+	<div class="fb-like" data-href="http://www.rasseye.com" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
+	<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://www.rasseye.com"></div>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.rasseye.com" data-via="cheesy_red">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<div id="vk_like"></div>
+	<script type="text/javascript">
+	  VK.Widgets.Like("vk_like", {type: "full"});
+	</script>
       </div>
 
       <!-- START THE FEATURETTES -->
