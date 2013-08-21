@@ -29,7 +29,7 @@ app.get('/us', function(req, res) {
 });
 
 app.get('/demo/1', function(req, res) {
-	res.send("Demo will come soon!".toString('utf-8'));
+	res.render('demo1.ejs');
 });
 
 app.get('/schedule', function(req, res) {
