@@ -24,8 +24,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/us', function(req, res) {
-	var buffer = fs.readFileSync('us.html');
-	res.send(buffer.toString('utf-8'));
+	res.render('us.ejs');
 });
 
 app.get('/demo/1', function(req, res) {
