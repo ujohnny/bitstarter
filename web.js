@@ -20,24 +20,30 @@ app.use(express.favicon(__dirname + '/public/icons/favicon.ico'));
 // Routes
 
 app.get('/', function(req, res) {
-	res.render('index.ejs');
+	res.render('pages/index.ejs');
 });
 
 app.get('/us', function(req, res) {
-	res.render('us.ejs');
+	res.render('pages/us.ejs');
 });
 
 app.get('/demo/1', function(req, res) {
-	res.render('demo1.ejs');
+	res.render('pages/demo1.ejs');
 });
 
 app.get('/roadmap', function(req, res) {
-	res.render('roadmap.ejs');
+	res.render('pages/roadmap.ejs');
 });
 
+//blog related stuff
 app.get('/blog', function(req, res) {
-	res.send("A cool project blog will come soon!".toString('utf-8'));
+    res.render('pages/blog.ejs');
 });
+
+app.get('/blog/hello', function(req, res) {
+    res.render('pages/blog_articles/hello.ejs');
+});
+//end blog stuff
 
 app.get('/fame', function(req, res) {
 	res.send("Our future wall of fame".toString('utf-8'));
