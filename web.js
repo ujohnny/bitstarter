@@ -31,8 +31,8 @@ app.get('/demo/1', function(req, res) {
 	res.render('demo1.ejs');
 });
 
-app.get('/schedule', function(req, res) {
-	res.send("Project schedule will come soon!".toString('utf-8'));
+app.get('/roadmap', function(req, res) {
+	res.render('roadmap.ejs');
 });
 
 app.get('/blog', function(req, res) {
