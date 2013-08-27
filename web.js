@@ -27,9 +27,15 @@ app.get('/us', function(req, res) {
 	res.render('pages/us.ejs');
 });
 
+//demo stuff
 app.get('/demo/1', function(req, res) {
 	res.render('pages/demo1.ejs');
 });
+
+app.get('/demo/2', function(req, res) {
+    res.render('pages/demo2.ejs');
+});
+//end demos
 
 app.get('/roadmap', function(req, res) {
 	res.render('pages/roadmap.ejs');
